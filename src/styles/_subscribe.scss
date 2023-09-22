@@ -1,0 +1,109 @@
+@mixin fonts($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: "M PLUS 1p", sans-serif;
+  color: $color;
+}
+
+.subscribe {
+  margin: 50px 0 50px 0;
+}
+
+.subscribe__description {
+  @include fonts(16px, 400, #0b0a0d);
+  margin-top: 25px;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe__description {
+    margin-top: 40px;
+  }
+}
+
+.subscribe__inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 20px;
+  max-width: 810px;
+
+  input {
+    width: 400px;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    color: rgba(11, 10, 13, 1);
+    box-sizing: border-box;
+    @include fonts(16px, 400, #0b0a0d);
+    padding-left: 15px;
+    &:focus {
+      border: 1px solid rgba(0, 0, 0, 1);
+    }
+  }
+  @media screen and (max-width: 900px) {
+    input {
+      width: 289px;
+      height: 49px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .subscribe__inputs {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+    width: 289px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe__inputs {
+    grid-row-gap: 20px;
+  }
+}
+
+::-webkit-input-placeholder {
+  @include fonts(14px, 400, rgba(0, 0, 0, 0.6));
+  padding: 0 5px 0 5px;
+}
+:-moz-placeholder {
+  @include fonts(14px, 400, rgba(0, 0, 0, 0.6));
+  padding: 0 5px 0 5px;
+}
+::-moz-placeholder {
+  @include fonts(14px, 400, rgba(0, 0, 0, 0.6));
+  padding: 0 5px 0 5px;
+}
+:-ms-input-placeholder {
+  @include fonts(14px, 400, rgba(0, 0, 0, 0.6));
+  padding: 0 5px 0 5px;
+}
+::-ms-input-placeholder {
+  @include fonts(14px, 400, rgba(0, 0, 0, 0.6));
+  padding: 0 5px 0 5px;
+}
+::placeholder {
+  @include fonts(14px, 400, rgba(0, 0, 0, 0.6));
+  padding: 0 5px 0 5px;
+}
+
+.subscribe__form {
+  margin: 18px 0 0 0;
+  button {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe__form {
+    width: 289px;
+    margin: 20px auto 0 auto;
+  }
+  .subscribe__form > button {
+    margin-top: 10px;
+  }
+}

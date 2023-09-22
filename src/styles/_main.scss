@@ -1,0 +1,92 @@
+.main {
+  margin: 0 auto;
+  background-color: #0b0a0d;
+  max-width: 1440px;
+}
+
+.wrapp {
+  width: 100%;
+  background-color: #0b0a0d;
+}
+
+.sliderBlock {
+  margin: 10px auto 0 auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b0a0d;
+  position: relative;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  .swiper-slide img {
+    width: 290px;
+  }
+}
+
+.mainSlider > h3 {
+  position: absolute;
+  bottom: 160px;
+  left: 50px;
+  @include fonts(80px, 500, #ffffff);
+}
+
+@media screen and (max-width: 1024px) {
+  .mainSlider > h3 {
+    bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainSlider > h3 {
+    bottom: 70px;
+    @include fonts(60px, 500, #ffffff);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .mainSlider > h3 {
+    bottom: 175px;
+    left: 10px;
+    @include fonts(40px, 500, #ffffff);
+  }
+}
+
+.buttons-block {
+  margin: 65px auto 0 auto;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 232px;
+}
+
+@media screen and (max-width: 768px) {
+  .buttons-block {
+    margin: 30px auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-wrapper {
+    height: 450px !important;
+  }
+}

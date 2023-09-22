@@ -1,0 +1,90 @@
+@import "./header";
+@import "./main";
+@import "./faq";
+@import "./news";
+@import "./subscribe";
+@import "./footer";
+@import "./normalize";
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin fonts($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: "M PLUS 1p", sans-serif;
+  color: $color;
+}
+
+li {
+  list-style-type: none;
+}
+
+.headline {
+  @include fonts(80px, 500, #ffffff);
+}
+
+@media screen and (max-width: 1024px) {
+  .headline {
+    @include fonts(40px, 500, #ffffff);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headline {
+    @include fonts(60px, 500, #ffffff);
+  }
+}
+
+.headline-black {
+  @include fonts(80px, 500, #0b0a0d);
+}
+
+@media screen and (max-width: 768px) {
+  .headline-black {
+    @include fonts(40px, 500, #0b0a0d);
+  }
+}
+
+.style-block {
+  max-width: 1240px;
+  //padding: 75px 100px 75px 100px;
+  padding: 0 10px 0 10px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button-form {
+  width: 141px;
+  height: 50px;
+  padding: 14px, 20px, 16px, 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 1);
+  @include fonts(16px, 400, rgba(11, 10, 13, 1));
+  &:hover {
+    border: none;
+    background-color: rgba(117, 255, 114, 1);
+  }
+  &:disabled {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: gray;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button-form {
+    width: 124px;
+    height: 44px;
+  }
+}
